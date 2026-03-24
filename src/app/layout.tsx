@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Plus_Jakarta_Sans } from "next/font/google";
+const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -19,15 +16,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="id"
+      className={`${jakartaSans.variable}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body
+        className="min-h-full flex flex-col items-center antialiased"
+        suppressHydrationWarning
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
