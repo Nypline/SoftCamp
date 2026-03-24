@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="w-full h-auto flex flex-col justify-center items-center mt-20 gap-5">
       <Image
-        src="/FooterLogo.png"
+        src="/Footerlogo.png"
         alt="Placeholder 4"
         width={100}
         height={75}

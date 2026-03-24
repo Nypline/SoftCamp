@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className="w-full max-w-5xl h-[70px] bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-between px-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20 relative">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/Logo.png"
             alt="Monity Logo"
             width={120}
             height={35}
